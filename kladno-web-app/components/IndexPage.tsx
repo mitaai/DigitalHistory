@@ -24,6 +24,7 @@ export default function IndexPage(props: IndexPageProps) {
   const { preview, loading, caseFiles, settings, laws, announcements } = props
 
   const [columnsData, setColumnsData] = useState<any[][]>([])
+  const [filters, setFilters] = useState([])
 
   const [allElms, setAllElms] = useState<any[]>([])
 
@@ -42,12 +43,27 @@ export default function IndexPage(props: IndexPageProps) {
   }
 
   useEffect(() => {
-    const allFiles = caseFiles.concat(laws).concat(announcements)
+    // filter case files based on filters
+    let allFiles = []
+
+    if (filters.length === 0) {
+      allFiles = caseFiles.concat(laws).concat(announcements)
+    } else {
+      if (filters.includes('caseFiles')) {
+        allFiles = allFiles.concat(caseFiles)
+      }
+      if (filters.includes('laws')) {
+        allFiles = allFiles.concat(laws)
+      }
+      if (filters.includes('announcements')) {
+        allFiles = allFiles.concat(announcements)
+      }
+    }
+
     // randomize order of all files
     allFiles.sort(() => Math.random() - 0.5)
-
     setAllElms(allFiles)
-  }, [caseFiles, laws, announcements])
+  }, [caseFiles, laws, announcements, filters])
 
   useEffect(() => {
     const columns = 5 // You can change this to the desired number of columns
@@ -64,11 +80,11 @@ export default function IndexPage(props: IndexPageProps) {
   }, [allElms])
 
   return (
-    <div className="bg-dark p-4">
+    <div className="min-h-screen bg-dark p-4">
       <PageHead />
 
       <KladnoHeader />
-      <SearchBar />
+      <SearchBar filters={filters} setFilters={setFilters} />
 
       <div className="flex w-full justify-center gap-6">
         {columnsData.map((column, columnIndex) => (

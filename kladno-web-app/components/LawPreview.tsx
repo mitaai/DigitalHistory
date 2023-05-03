@@ -11,7 +11,7 @@ export default function LawPreview(props: { law: any }) {
         passHref
         className=" hover:cursor-pointer "
       >
-        <p className="px-2 py-4 font-mono text-md text-white">
+        <p className="px-2 py-4 font-serif text-md text-white">
           Law {props.law.title.split('-')[2]},{props.law.title.split('-')[1]}
         </p>
         <hr className="border-1 border-semi-dark"></hr>

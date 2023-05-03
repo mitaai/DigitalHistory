@@ -13,7 +13,7 @@ export default function CaseFilePreview(props: { case: CaseFile }) {
         <img src={props.case.documents[0].scan}></img>
         <hr className="border-1 border-semi-dark "></hr>
 
-        <p className="px-2 py-4 font-mono text-md text-white">
+        <p className="px-2 py-4 font-serif text-md text-white">
           {props.case.personProsecuted.firstName}{' '}
           {props.case.personProsecuted.lastName}
         </p>

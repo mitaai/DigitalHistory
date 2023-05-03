@@ -9,14 +9,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Space Grotesk', 'sans-serif'],
-        'mono': [ 'Space Mono', 'monospace'],
+        sans: ['Space Grotesk', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
       },
       colors: {
-        'dark': '#2D2F3A',
-        'semi-dark': '#636786',
-        'lightgrey': '#EFEFF0',
-        'white': '#FBFBFB',
+        dark: '#2E2B26',
+        'semi-dark': '#7C7671',
+        lightgrey: '#EFEFF0',
+        white: '#FBFBFB',
         // 'accent-1': '#FAFAFA',
         // 'accent-2': '#EAEAEA',
         // 'accent-7': '#333',
@@ -35,9 +35,9 @@ module.exports = {
       //   tight: 1.2,
       // },
       fontSize: {
-        'head': '25.5px',
-        'md': '23.5px',
-        'sm': '12px',
+        head: '25.5px',
+        md: '23.5px',
+        sm: '12px',
         'sm-mono': '11.5px',
         // '5xl': '2.5rem',
         // '6xl': '2.75rem',

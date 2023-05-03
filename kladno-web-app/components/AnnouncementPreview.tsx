@@ -10,7 +10,7 @@ export default function AnnouncementPreview(props: { announcement: any }) {
         passHref
         className=" hover:cursor-pointer "
       >
-        <p className="px-2 py-4 font-mono text-md text-white">
+        <p className="px-2 py-4 font-serif text-md text-white">
           Announcement {props.announcement.title.split('-')[2]},
           {props.announcement.title.split('-')[1]}
         </p>
