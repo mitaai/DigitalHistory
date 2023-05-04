@@ -10,7 +10,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Space Grotesk', 'sans-serif'],
-        mono: ['Space Mono', 'monospace'],
+        mono: ['Source Code Pro', 'monospace'],
+        serif: ['Source Serif Pro', 'serif'],
+        logo: ['Staatliches-Regular', 'monospace'],
       },
       colors: {
         dark: '#2E2B26',
@@ -35,14 +37,13 @@ module.exports = {
       //   tight: 1.2,
       // },
       fontSize: {
-        head: '25.5px',
-        md: '23.5px',
-        sm: '12px',
-        'sm-mono': '11.5px',
-        // '5xl': '2.5rem',
-        // '6xl': '2.75rem',
-        // '7xl': '4.5rem',
-        // '8xl': '6.25rem',
+        // => https://tailwindremconverter.netlify.app/
+        lg: ['3rem', '3rem'],
+        md: ['1.469rem', '1.75rem'],
+        sm: ['0.75rem', '1rem'],
+        smmono: ['0.719rem', '1rem'],
+        mdmono: ['1.406rem', '1.75rem'],
+        head: ['1.75rem', '1.75rem'],
       },
       // boxShadow: {
       //   small: '0 5px 10px rgba(0, 0, 0, 0.12)',
