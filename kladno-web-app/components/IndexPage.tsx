@@ -3,13 +3,13 @@ import IntroTemplate from 'intro-template'
 import * as demo from 'lib/demo.data'
 import type { CaseFile, Post, Settings } from 'lib/sanity.queries'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useEffect,useState } from 'react'
 
+import AnnouncementPreview from './AnnouncementPreview'
 import CaseFilePreview from './CaseFilePreview'
 import KladnoHeader from './KladnoHeader'
-import SearchBar from './Search'
-import AnnouncementPreview from './AnnouncementPreview'
 import LawPreview from './LawPreview'
+import SearchBar from './Search'
 
 export interface IndexPageProps {
   preview?: boolean
@@ -80,7 +80,7 @@ export default function IndexPage(props: IndexPageProps) {
   }, [allElms])
 
   return (
-    <div className="min-h-screen bg-dark p-4">
+    <div className="min-h-screen bg-dark px-4 pb-4 pt-2.5">
       <PageHead />
 
       <KladnoHeader />

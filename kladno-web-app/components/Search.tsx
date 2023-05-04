@@ -48,7 +48,7 @@ export default function SearchBar(props) {
             className="h-[48px] w-full border border-t-0 border-semi-dark bg-dark px-4 text-mdmono font-mono text-semi-dark placeholder-semi-dark caret-semi-dark focus:border-white focus:text-white focus:outline-none"
           />
         </div>
-        <div className="mt-4 flex w-full justify-center space-x-2">
+        <div className="mt-4 flex w-full justify-center space-x-4">
           <div
             onClick={() => filterClicked('caseFiles')}
             className={`rounded-full border font-mono text-mdmono border-semi-dark  ${
