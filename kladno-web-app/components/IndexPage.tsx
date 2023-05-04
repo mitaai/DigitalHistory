@@ -66,7 +66,7 @@ export default function IndexPage(props: IndexPageProps) {
   }, [caseFiles, laws, announcements, filters])
 
   useEffect(() => {
-    const columns = 5 // You can change this to the desired number of columns
+    const columns = 6 // You can change this to the desired number of columns
     const columnsHeights = new Array(columns).fill(0)
     const newColumnsData = new Array(columns).fill([]).map(() => [])
 
@@ -86,7 +86,7 @@ export default function IndexPage(props: IndexPageProps) {
       <KladnoHeader />
       <SearchBar filters={filters} setFilters={setFilters} />
 
-      <div className="flex w-full justify-center gap-6">
+      <div className="flex w-full justify-center gap-4">
         {columnsData.map((column, columnIndex) => (
           <div key={columnIndex} className="w-1/5 ">
             {column.map((file) => (
